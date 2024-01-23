@@ -2,6 +2,8 @@ package com.training;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
+import java.util.Vector;
 
 public class Main {
     public static void main(String[] args) {
@@ -97,6 +99,72 @@ public class Main {
 
 //        System.out.println(linkedList.indexOf("Ba"));
 //        System.out.println(linkedList.lastIndexOf("Bốn"));
+
+        System.out.println("============================================");
+        System.out.println("Bài tập Vector:");
+        System.out.println("============================================");
+
+        Vector<String> vector = new Vector<>();
+
+        vector.add("Sáu");
+        vector.add("Bảy");
+        vector.add("Tám");
+        vector.add("Chín");
+        vector.add("Mười");
+
+        System.out.println(vector);
+
+//        vector.add(5, "Mười một");
+//        System.out.println("after add new value at index [5] = " + vector);
+
+//        vector.clear();
+//        System.out.println("after clear = " + vector);
+
+//        System.out.println(vector.contains("Mười"));
+
+//        System.out.println(vector.indexOf("Tám"));
+
+//        System.out.println("get index [2] = " + vector.get(2));
+
+
+        Vector<String> vector1 = new Vector<>();
+
+        vector1.add("Tám");
+        vector1.add("Chín");
+
+//        vector1.addAll(vector);
+//        System.out.println(vector1);
+
+//        vector1.addElement("Mười");
+//        System.out.println(vector1);
+
+//        System.out.println("after retain vector 1 = " + vector.retainAll(vector1));
+
+        System.out.println("============================================");
+        System.out.println("Bài tập Vector:");
+        System.out.println("============================================");
+
+        Queue<String> queue = new LinkedList<>();
+
+        queue.add("2");
+        queue.add("3");
+        queue.add("4");
+        queue.add("5");
+        queue.add("6");
+        queue.add("7");
+
+        System.out.println(queue);
+
+//        System.out.println(queue.offer("1"));
+//        System.out.println(queue.remove());
+
+//        queue.clear();
+//        System.out.println(queue.poll());
+
+//        System.out.println(queue.element());
+
+//        queue.clear();
+//        System.out.println(queue.peek());
 
     }
 }
