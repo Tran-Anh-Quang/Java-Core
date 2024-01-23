@@ -1,12 +1,11 @@
-package com.ecommerce;
+package com.traning;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class ArrayList {
     public static void main(String[] args) {
 
-        List<String> list = new ArrayList<>();
+        List<String> list = new java.util.ArrayList<>();
 
         list.add("1");
         list.add("2");
@@ -42,7 +41,7 @@ public class Main {
 //        System.out.println("size of list = " + list.size());
 
 
-        List<String> list1 = new ArrayList<>();
+        List<String> list1 = new java.util.ArrayList<>();
 
         list1.add("2");
         list1.add("3");
