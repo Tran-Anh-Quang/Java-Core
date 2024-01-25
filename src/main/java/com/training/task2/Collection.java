@@ -2,6 +2,8 @@ package com.training.task2;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
+import java.util.Vector;
 
 public class Collection {
     public static void runArrayListExercise() {
@@ -54,7 +56,7 @@ public class Collection {
 
     public static void runLinkedListExercise() {
 
-        java.util.LinkedList<String> linkedList = new java.util.LinkedList<>();
+        LinkedList<String> linkedList = new java.util.LinkedList<>();
 
         linkedList.add("Một");
         linkedList.add("Hai");
@@ -93,7 +95,7 @@ public class Collection {
 
     public static void runQueueExercise() {
 
-        java.util.Queue<String> queue = new LinkedList<>();
+        Queue<String> queue = new LinkedList<>();
 
         queue.add("2");
         queue.add("3");
@@ -118,7 +120,7 @@ public class Collection {
 
     public static void runVectorExercise() {
 
-        java.util.Vector<String> vector = new java.util.Vector<>();
+        Vector<String> vector = new java.util.Vector<>();
 
         vector.add("Sáu");
         vector.add("Bảy");
@@ -141,7 +143,7 @@ public class Collection {
 //        System.out.println("get index [2] = " + vector.get(2));
 
 
-        java.util.Vector<String> vector1 = new java.util.Vector<>();
+        Vector<String> vector1 = new java.util.Vector<>();
 
         vector1.add("Tám");
         vector1.add("Chín");
