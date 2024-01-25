@@ -58,7 +58,7 @@ public class StringExercise {
     }
 
     public static void runQuestionC(){
-        String fullName = "Nguyễn Văn A";
+        String fullName = "Nguyễn Trần Văn A";
         String tenSauKhiLoaiBo = questionC(fullName);
         System.out.println("Tên sau khi loại bỏ tên đệm: " + tenSauKhiLoaiBo);
     }
