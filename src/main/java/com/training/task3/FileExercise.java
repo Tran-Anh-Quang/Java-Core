@@ -39,7 +39,7 @@ public class FileExercise {
         }
     }
 
-    public static void runFileExercise(){
+    public static void runFileAppendExercise(){
         String file1Path = "C:\\Users\\dinos\\Downloads\\file2.txt";
         String file2Path = "C:\\Users\\dinos\\Downloads\\file1.txt";
         String outputPath = "C:\\Users\\dinos\\Downloads\\output_file.txt";
