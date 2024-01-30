@@ -1,4 +1,4 @@
-package com.training.task5;
+package com.training.task5.q1;
 
 import java.io.IOException;
 import java.lang.reflect.Constructor;
