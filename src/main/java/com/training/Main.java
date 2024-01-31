@@ -1,14 +1,15 @@
 package com.training;
 
-import com.training.task3.Student;
 import com.training.task5.q3.Inject;
-import com.training.task5.q3.StudentService;
+import com.training.task6.q2q3.Movie;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.text.ParseException;
 import java.util.Arrays;
+
+import static com.training.task6.q4q5.StreamAPI.runQ4;
 
 public class Main {
     public static void main(String[] args) throws ParseException, IOException, ClassNotFoundException {
@@ -56,18 +57,32 @@ public class Main {
 //        System.out.println("DataSource Password: " + dataSourcePassword);
 //        System.out.println("System Timeout: " + systemTimeout);
 
-        StudentService studentService = new StudentService();
-        injectDependencies(studentService);
+//        StudentService studentService = new StudentService();
+//        injectDependencies(studentService);
+//
+//        Student newStudent = new Student();
+//        newStudent.setName("John Doe");
+//        newStudent.setAge(18);
+//        newStudent.setGrade(8.0);
+//
+//        studentService.insertStudent(newStudent);
+//
+//        String retrievedStudent = studentService.repository.findByName("John Doe");
+//        System.out.println("Inserted Student: " + retrievedStudent);
 
-        Student newStudent = new Student();
-        newStudent.setName("John Doe");
-        newStudent.setAge(18);
-        newStudent.setGrade(8.0);
+        System.out.println(" ");
+        System.out.println("=========Task #6-Reflection Exercise=========");
 
-        studentService.insertStudent(newStudent);
+        Movie cartoon = Movie::runQ5;
+        cartoon.detail("Cartoon movie details: Animated, fun, and imaginative.");
 
-        String retrievedStudent = studentService.repository.findByName("John Doe");
-        System.out.println("Inserted Student: " + retrievedStudent);
+        Movie horror = Movie::runQ5;
+        horror.detail("Horror movie details: Suspense, fear, and supernatural elements.");
+
+        Movie action = Movie::runQ5;
+        action.detail("Action movie details: Suspense, thrill, and adrenaline rush.");
+
+        runQ4();
 
 
     }
