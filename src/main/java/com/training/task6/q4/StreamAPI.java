@@ -1,4 +1,4 @@
-package com.training.task6.q4q5;
+package com.training.task6.q4;
 
 import java.util.List;
 import java.util.Random;

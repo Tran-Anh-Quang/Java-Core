@@ -1,7 +1,7 @@
 package com.training;
 
 import com.training.task5.q3.Inject;
-import com.training.task6.q2q3.Movie;
+import com.training.task6.q2q3q5.Movie;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -9,7 +9,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.text.ParseException;
 import java.util.Arrays;
 
-import static com.training.task6.q4q5.StreamAPI.runQ4;
+import static com.training.task6.q4.StreamAPI.runQ4;
+import static com.training.task6.q6.RunQ6.runQ6;
 
 public class Main {
     public static void main(String[] args) throws ParseException, IOException, ClassNotFoundException {
@@ -84,7 +85,7 @@ public class Main {
 
         runQ4();
 
-
+        runQ6();
     }
 
     private static void injectDependencies(Object object) {

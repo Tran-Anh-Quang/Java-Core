@@ -1,4 +1,4 @@
-package com.training.task6.q2q3;
+package com.training.task6.q2q3q5;
 @FunctionalInterface
 public interface Movie {
 
