@@ -1,16 +1,16 @@
 package com.training;
 
 import com.training.task5.q3.Inject;
-import com.training.task6.q2q3q5.Movie;
+import com.training.task7.controller.EmployeeController;
+import com.training.task7.model.Employee;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Arrays;
-
-import static com.training.task6.q4.StreamAPI.runQ4;
-import static com.training.task6.q6.RunQ6.runQ6;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws ParseException, IOException, ClassNotFoundException {
@@ -71,21 +71,60 @@ public class Main {
 //        String retrievedStudent = studentService.repository.findByName("John Doe");
 //        System.out.println("Inserted Student: " + retrievedStudent);
 
+//        System.out.println(" ");
+//        System.out.println("=========Task #6-Reflection Exercise=========");
+//
+//        Movie cartoon = Movie::runQ5;
+//        cartoon.detail("Cartoon movie details: Animated, fun, and imaginative.");
+//
+//        Movie horror = Movie::runQ5;
+//        horror.detail("Horror movie details: Suspense, fear, and supernatural elements.");
+//
+//        Movie action = Movie::runQ5;
+//        action.detail("Action movie details: Suspense, thrill, and adrenaline rush.");
+//
+//        runQ4();
+//
+//        runQ6();
+
         System.out.println(" ");
-        System.out.println("=========Task #6-Reflection Exercise=========");
+        System.out.println("=========Task #7-MVC Exercise=========");
 
-        Movie cartoon = Movie::runQ5;
-        cartoon.detail("Cartoon movie details: Animated, fun, and imaginative.");
+        EmployeeController controller = new EmployeeController();
 
-        Movie horror = Movie::runQ5;
-        horror.detail("Horror movie details: Suspense, fear, and supernatural elements.");
+        System.out.println("\nAdd new employee:");
+        // Add a new employee
+        controller.addEmployee("John Doe", "Engineering", "Java Developer");
 
-        Movie action = Movie::runQ5;
-        action.detail("Action movie details: Suspense, thrill, and adrenaline rush.");
+        // Display details of the newly added employee
+        Employee newEmployee = controller.getEmployees().get(0);
+        controller.displayEmployeeDetails(newEmployee);
 
-        runQ4();
+        boolean isDeleted = controller.deleteEmployee(newEmployee);
 
-        runQ6();
+        if (isDeleted) {
+            System.out.println("Employee successfully deleted.");
+        } else {
+            System.out.println("Employee not found or deletion unsuccessful.");
+        }
+
+
+        List<Employee> employees = new ArrayList<>();
+        employees.add(new Employee("John", "IT", "Java"));
+        employees.add(new Employee("Alice", "HR", "Communication"));
+        employees.add(new Employee("Jack", "IT", "Python"));
+        employees.add(new Employee("Bob", "Finance", "Accounting"));
+        employees.add(new Employee("Taylor", "HR", "Communication"));
+        employees.add(new Employee("David", "IT", "Java"));
+
+
+        //Sort employees by department
+        System.out.println("\n=== Sorted Employee List By Department ===");
+        controller.sortByDepartment(employees);
+
+        //Sort employees by skill
+        System.out.println("\n=== Sorted Employee List By Skill ===");
+        controller.sortBySkill(employees);
     }
 
     private static void injectDependencies(Object object) {
